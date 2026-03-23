@@ -1,0 +1,179 @@
+/* On applique la police Inika et le fond blanc à toute la page */
+body {
+    font-family: 'Inika', serif;
+    background-color: #FFFFFF;
+}
+
+
+
+/* Mon prompt à l'IA : "Dans mon header, j'ai le titre à gauche et mes petits émojis de réseaux sociaux à droite. Comment je peux faire en CSS pour les écarter de chaque côté sans devoir calculer des marges compliquées au pixel près ?" */
+/* Réponse : Utilisation de Flexbox avec "justify-content: space-between". */
+/* Stylise le bandeau supérieur (couleur, espace intérieur et alignement) */
+.en-tete {
+    background-color: #AE0000;
+    color: #FFFFFF;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between; /* Écarte le titre et les icônes aux extrémités */
+    align-items: center; /* Centre verticalement */
+}
+
+/* On stylise le bloc rouge du menu (couleurs et marges au-dessus/en-dessous) */
+.menu-principal {
+    background-color: #AE0000;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* On transforme la liste vertical du menu en ligne horizontale */
+.menu-principal ul {
+    display: flex;
+    justify-content: center; /* Centre les liens au milieu de la barre */
+    gap: 40px; /* Espace entre chaque lien */
+    list-style: none; /* Enlève les petits points de la liste */
+}
+
+/* On met les liens du menu en blanc et retire le trait de soulignement */
+.menu-principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* On stylise le footer en rouge et centre le texte */
+.pied-de-page {
+    background-color: #AE0000;
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+/* On met le lien dans le footer en blanc */
+.pied-de-page a {
+    color: #FFFFFF;
+}
+
+
+/* On place les 3 affiches et les deux flèches sur une seule ligne */
+.affiches {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* On regroupe les 3 affiche ensemble avec un espace entre elles */
+.liste-pieces {
+    display: flex;
+    gap: 40px;
+}
+
+/* On centre le texte (le titre h2) sous l'affiche */
+.piece {
+    text-align: center;
+}
+
+
+/* Mon prompt à l'IA : "Empêche le titre des affiches d'être souligné et bleu" */
+.lien-piece {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Mon prompt à l'IA : "Pour le popup, crée le fond gris transparent qui recouvre l'écran, caché par défaut " */
+.fond-popup {
+    display: none; /* C'est cette ligne qui cache le popup initialement */
+    position: fixed; /* Reste fixe à l'écran même en scrollant */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+}
+
+/* On affiche le popup uniquement si on clique sur le lien correspondant */
+.fond-popup:target {
+    display: flex;
+}
+
+/* La carte rose au centre du popup */
+.carte-popup {
+    background-color: #FCEAEB; 
+    padding: 40px;
+    border-radius: 20px; /* Coins arrondis */
+    width: 800px;
+    position: relative; /* Indispensable pour placer la croix correctement ensuite, voir ligne 116 */
+}
+
+/* Mon prompt à l'IA : "Pour ma page de détail (le pop-up), j'ai mis un bouton de fermeture (la croix). J'aimerais le placer pile en haut à droite de la carte rose, mais à chaque fois que j'essaie, ça décale tout le reste de ma mise en page. Il y a une propriété pour ça ?" */
+/* Réponse : "position: absolute" permet de placer la croix où on veut par rapport à la carte. */
+/* Le bouton croix en haut à droite */
+.bouton-fermer {
+    position: absolute; /* Sort du flux normal pour se placer librement */
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #AE0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* On aligne le grand titre et le bloc des tags (Catégorie + Étoile) */
+.en-tete-carte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* On agrandi la taille du titre de la pièce dans le popup */
+.en-tete-carte h1 {
+    font-size: 50px;
+}
+
+/* On crée une petite "pilule" blanche pour la catégorie */
+.badge-categorie {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* On place l'image à gauche et le texte descriptif à droite */
+.contenu-carte {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* On gère la taille de l'image dans le popup (un peu plus grande) */
+.contenu-carte img {
+    width: 300px;
+    height: 350px; /* On force une hauteur identique pour toutes ! */
+}
+
+/* On centre et ajuste la taille du texte à droite de l'image */
+.infos-texte {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Mon prompt à l'IA : "Mon bouton 'Réserver' dans la modale est en fait une balise <a>, mais j'aimerais qu'il ressemble à un gros bouton rouge avec des bords arrondis. Comment je peux styliser un simple lien pour qu'il ressemble à ça ?" */
+/* Réponse : En utilisant "display: inline-block", on peut lui donner du volume (padding), une couleur de fond et arrondir ses angles. */
+/* Transforme un lien texte simple en un gros bouton rouge */
+.bouton-reserver {
+    display: inline-block; /* Permet d'appliquer des marges intérieures au lien */
+    background-color: #AE0000;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 20px;
+}

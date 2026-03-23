@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de la page -->
+    <title>Le Théâtre de l'Emlyon</title>
+
+    <!-- Implémentation de la police Inika -->
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="en-tete">
+
+        <!-- Titre avec retour ligne -->
+        <div class="titre-site">
+            <h1>Le Théâtre<br>de l'Emlyon</h1>
+        </div>
+
+        <!-- Icônes -->
+        <div class="reseaux-sociaux">
+            <span>📷</span> 
+            <span>📞</span> 
+            <span>✉️</span>
+        </div>
+    </header>
+
+
+    <!-- Menu -->
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="#">A L'AFFICHE ⌄</a></li>
+            <li><a href="#">BILLETERIE ⌄</a></li>
+            <li><a href="#">PRIVATISATION ⌄</a></li>
+            <li><a href="#">LE THEATRE ⌄</a></li>
+            <li><a href="#">INFOS PRATIQUES ⌄</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Affiches -->
+    <section class="affiches">
+
+        <div class="fleche">⟨</div>
+
+        <!-- 
+        Mon prompt à l'IA :
+
+        "Je suis en train de faire mes cartes de pièces, et j’aimerais que quand on clique dessus,
+        ça ouvre un popup avec les infos détaillées.
+
+        Je ne vois pas trop comment relier chaque carte à son popup correspondant.
+
+        Est-ce que tu peux me montrer comment structurer le lien et les id pour que ça fonctionne proprement ?"
+        -->
+        <div class="liste-pieces">
+
+            <article class="piece">
+                <a href="#popup-wicked" class="lien-piece">
+                    <h2>Wicked</h2>
+                    <img src="https://makerslab.em-lyon.com/dww/data/shows/wicked.jpg" alt="Affiche de Wicked">
+                </a>
+            </article>
+
+            <article class="piece">
+                <a href="#popup-oleanna" class="lien-piece">
+                    <h2>Oleanna</h2>
+                    <img src="https://makerslab.em-lyon.com/dww/data/shows/oleanna.jpg" alt="Affiche de Oleanna">
+                </a>
+            </article>
+
+            <article class="piece">
+                <a href="#popup-mirror" class="lien-piece">
+                    <h2>Mirror</h2>
+                    <img src="https://makerslab.em-lyon.com/dww/data/shows/the-mirror-and-the-light.jpg" alt="Affiche de Mirror">
+                </a>
+            </article>
+
+        </div>
+
+        <div class="fleche">⟩</div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="pied-de-page">
+        <p>Découvrez la dernière pièce de la semaine - <a href="#">lets go ↗</a></p>
+    </footer>
+
+
+    <!-- Popup Wicked -->
+    <!-- 
+    Mon prompt à l'IA :
+
+    "J’arrive bien à afficher mon popup quand je clique sur une carte,
+    mais je ne comprends pas trop comment le fermer proprement.
+
+    J’ai vu qu’on pouvait utiliser un lien avec href=\"#\",
+    mais j’aimerais comprendre pourquoi ça ferme le popup."
+    -->
+    <div id="popup-wicked" class="fond-popup">
+
+        <div class="carte-popup">
+
+            <a href="#" class="bouton-fermer">✖</a>
+
+            <header class="en-tete-carte">
+                <h1>Wicked</h1>
+
+                <div class="tags">
+                    <span class="badge-categorie">Catégorie : Musicals</span>
+                    <span class="etoile">⭐</span>
+                </div>
+            </header>
+
+            <section class="contenu-carte">
+
+                <img src="https://makerslab.em-lyon.com/dww/data/shows/wicked.jpg" alt="Affiche Wicked">
+
+                <div class="infos-texte">
+                    <p>Since opening on Broadway in 2003, Wicked has taken the world of musical theatre by storm.</p><br>
+
+                    <p>Apollo Victoria Theatre From Mon Mar 14 2022 to Tue May 31 2022</p><br>
+
+                    <p class="prix"><u>$29.00 (249 tickets remaining)</u></p>
+
+                    <a href="#" class="bouton-reserver">Réserver</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Popup Oleanna -->
+    <div id="popup-oleanna" class="fond-popup">
+        <div class="carte-popup">
+
+            <a href="#" class="bouton-fermer">✖</a>
+
+            <header class="en-tete-carte">
+                <h1>Oleanna</h1>
+                <div class="tags">
+                    <span class="badge-categorie">Catégorie : Drama</span>
+                    <span class="etoile">⭐</span>
+                </div>
+            </header>
+
+            <section class="contenu-carte">
+                <img src="https://makerslab.em-lyon.com/dww/data/shows/oleanna.jpg" alt="Affiche Oleanna">
+
+                <div class="infos-texte">
+                    <p>A gripping and controversial play by David Mamet.</p><br>
+                    <p>Gielgud Theatre From Sun Dec 19 2021 to Sun Jan 23 2022</p><br>
+                    <p class="prix"><u>$59.00 (198 tickets remaining)</u></p>
+                    <a href="#" class="bouton-reserver">Réserver</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Popup Mirror -->
+    <div id="popup-mirror" class="fond-popup">
+        <div class="carte-popup">
+
+            <a href="#" class="bouton-fermer">✖</a>
+
+            <header class="en-tete-carte">
+                <h1>Mirror</h1>
+                <div class="tags">
+                    <span class="badge-categorie">Catégorie : Historical</span>
+                    <span class="etoile">⭐</span>
+                </div>
+            </header>
+
+            <section class="contenu-carte">
+                <img src="https://makerslab.em-lyon.com/dww/data/shows/the-mirror-and-the-light.jpg" alt="Affiche Mirror">
+
+                <div class="infos-texte">
+                    <p>Hilary Mantel's The Mirror and the Light adapted for the stage.</p><br>
+                    <p>Arts Theatre From Fri Aug 27 2021 to Sat Oct 23 2021</p><br>
+                    <p class="prix"><u>$49.00 (329 tickets remaining)</u></p>
+                    <a href="#" class="bouton-reserver">Réserver</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- 
+    Mon prompt à l'IA :
+
+    "Je me rends compte que je copie-colle toute la structure HTML pour chaque popup,
+    et ça commence à faire beaucoup de répétition.
+
+    Pour l’instant ça fonctionne, mais est-ce qu'il y a une manière simple d’optimiser ça ?
+    
+    Partie de la réponse : 
+    Actuellement :
+    → 1 popup = 1 pièce
+    → duplication volontaire pour simplicité
+
+    Amélioration possible :
+    → 1 seule popup + JS (innerHTML / dataset / JSON)"
+    -->
+
+</body>
+</html>
