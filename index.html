@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
     <!-- Header -->
@@ -59,8 +60,8 @@
 
         Est-ce que tu peux me montrer comment structurer le lien et les id pour que ça fonctionne proprement ?"
         -->
-        <div class="liste-pieces">
-
+        <div class="liste-pieces" id="conteneur-affiches">
+<!-- 
             <article class="piece">
                 <a href="#popup-wicked" class="lien-piece">
                     <h2>Wicked</h2>
@@ -80,7 +81,7 @@
                     <h2>Mirror</h2>
                     <img src="https://makerslab.em-lyon.com/dww/data/shows/the-mirror-and-the-light.jpg" alt="Affiche de Mirror">
                 </a>
-            </article>
+            </article> -->
 
         </div>
 
@@ -104,7 +105,9 @@
     J’ai vu qu’on pouvait utiliser un lien avec href=\"#\",
     mais j’aimerais comprendre pourquoi ça ferme le popup."
     -->
-    <div id="popup-wicked" class="fond-popup">
+    <div id="conteneur-popups"></div>
+
+    <!-- <div id="popup-wicked" class="fond-popup">
 
         <div class="carte-popup">
 
@@ -134,11 +137,11 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Popup Oleanna -->
-    <div id="popup-oleanna" class="fond-popup">
+    <!-- <div id="popup-oleanna" class="fond-popup">
         <div class="carte-popup">
 
             <a href="#" class="bouton-fermer">✖</a>
@@ -162,11 +165,11 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Popup Mirror -->
-    <div id="popup-mirror" class="fond-popup">
+    <!-- <div id="popup-mirror" class="fond-popup">
         <div class="carte-popup">
 
             <a href="#" class="bouton-fermer">✖</a>
@@ -190,7 +193,7 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- 
@@ -210,5 +213,10 @@
     → 1 seule popup + JS (innerHTML / dataset / JSON)"
     -->
 
+
+
+
+<!-- loa the javascript file -->
+<script src="script.js" defer></script>
 </body>
 </html>

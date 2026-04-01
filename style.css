@@ -64,17 +64,23 @@ body {
     margin-bottom: 50px;
 }
 
-/* On regroupe les 3 affiche ensemble avec un espace entre elles */
+/* On regroupe les 3 affiches ensemble avec un espace entre elles */
 .liste-pieces {
     display: flex;
     gap: 40px;
+    align-items: flex-end; 
 }
 
-/* On centre le texte (le titre h2) sous l'affiche */
+/* On centre le texte et on bloque la largeur */
 .piece {
     text-align: center;
+    width: 250px; 
 }
 
+/* On ajoute un petit espace sous le titre de l'affiche pour que ce soit plus aéré */
+.piece h2 {
+    margin-bottom: 15px;
+}
 
 /* Mon prompt à l'IA : "Empêche le titre des affiches d'être souligné et bleu" */
 .lien-piece {
@@ -127,8 +133,17 @@ body {
 .en-tete-carte {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; 
+    gap: 30px; 
     margin-bottom: 30px;
+    padding-right: 50px; /* On force une marge à droite pour éviter la croix ✖ */
+}
+
+/* On protège la petite "pilule" de catégorie pour qu'elle ne s'écrase pas */
+.tags {
+    flex-shrink: 0; 
+    white-space: nowrap; 
+    margin-top: 20px; /* On pousse le badge vers le bas pour l'aligner joliment avec le texte */
 }
 
 /* On agrandi la taille du titre de la pièce dans le popup */
@@ -154,7 +169,7 @@ body {
 /* On gère la taille de l'image dans le popup (un peu plus grande) */
 .contenu-carte img {
     width: 300px;
-    height: 350px; /* On force une hauteur identique pour toutes ! */
+    height: 350px; /* On force une hauteur identique pour toutes */
 }
 
 /* On centre et ajuste la taille du texte à droite de l'image */

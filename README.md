@@ -3,17 +3,18 @@
 # Le Théâtre de l'Emlyon
 
 # Description du projet
-Ce projet est une page web réalisée en HTML et CSS représentant un site de théâtre.  
-L’objectif est de présenter plusieurs pièces à l’affiche avec un système de cartes cliquables qui ouvrent des popups détaillées.
+Ce projet est une page web réalisée en HTML, CSS et JavaScript représentant un site de théâtre.  
+L’objectif est de présenter plusieurs pièces à l’affiche avec un système de cartes interactives qui ouvrent des popups détaillées.
 
 Le projet met en avant :
-Une structure HTML, une mise en page avec CSS, un système de popup
+Une structure HTML, une mise en page avec CSS, un système de popup, une génération dynamique du contenu via JavaScript (API JSON).
+
 
 # Fonctionnalités principales
 Header avec titre + icônes, un menu de navigation horizontal, une section "à l’affiche" avec plusieurs pièces, des popups détaillés pour chaque pièce, un footer simple
 
 # Technologies utilisées
-HTML, CSS, Google Fonts (pour la police Inika)
+HTML, CSS, Google Fonts (pour la police Inika), JavaScript 
 
 
 # Fonctionnement des popups
