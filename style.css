@@ -64,6 +64,31 @@ body {
     margin-bottom: 50px;
 }
 
+/* Mon prompt à l'IA : "Comment je peux styliser les flèches de navigation ?" */
+.fleche {
+    font-size: 30px; /* On grossit la flèche */
+    font-weight: bold;
+    color: #AE0000; /* La flèche en rouge */
+    background-color: #FCEAEB; /* Un fond rose clair  */
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    justify-content: center; /* Centre la flèche horizontalement */
+    align-items: center; /* Centre la flèche verticalement */
+    border-radius: 50%; 
+    cursor: pointer; /* Change la souris en petite main pour montrer que c'est cliquable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une petite ombre élégante */
+    transition: all 0.3s ease; 
+    user-select: none; /* Empêche de surligner la flèche en bleu si on clique trop vite */
+}
+
+/* L'effet quand on passe la souris sur la flèche */
+.fleche:hover {
+    background-color: #AE0000; /* Le fond devient rouge */
+    color: #FFFFFF; /* La flèche devient blanche */
+    transform: scale(1.1); /* Le bouton grossit un tout petit peu */
+}
+
 /* On regroupe les 3 affiches ensemble avec un espace entre elles */
 .liste-pieces {
     display: flex;
